@@ -27,13 +27,31 @@
 // console.log(`my main movie is: ${topThreeMovies[1]}`);
 // console.log(`this is a type of: ${typeof(topThreeMovies)}`);
 
+
+
 // ------- In Class Assignment ---------
 
+
 // Asks for the user's first name
+let firstName = prompt('What is your first name?');
+
+
 // Asks for the user's last name
+let lastName = prompt('What is your last name?');
 
 // Logs the user's first name to the console
+console.log(`${firstName}`);
 
 // Alerts the user's last name
+alert(`Your last name is: ${lastName}`);
 
-// *Asks for the user's birthday, confirms whether the birthday recieved is correct, and alerts the resulting birthday
+// *Asks for the user's birthday,
+let birthDay = prompt(`What is your birthday?`); 
+
+// confirms whether the birthday recieved is correct,
+confirm(`You entered: ${birthDay} Is this correct?`);
+
+// and alerts the resulting birthday
+alert(`Your birthday is on: ${birthDay}`);
+
+alert(`Your birthday new Date: ${birthDay}`);
