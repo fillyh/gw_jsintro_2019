@@ -68,17 +68,67 @@
 // console.log(myFavArray);
 // console.log(myFavArray.indexOf(true));
 
-let favMovieOne = ["Anchor Man", "Ron Burgundy"];
-let favMovieTwo = ["The Matrix", "New"];
-let favMovieThree = ["Aladdin", "Aladdin"];
-let favMovieFour = ["Akira", "Tetsuo"];
-let favMovieFive = ["Logan", "Wolverine"];
+// let favMovieOne = ["Anchor Man", "Ron Burgundy"];
+// let favMovieTwo = ["The Matrix", "New"];
+// let favMovieThree = ["Aladdin", "Aladdin"];
+// let favMovieFour = ["Akira", "Tetsuo"];
+// let favMovieFive = ["Logan", "Wolverine"];
 
-let favMovies = [favMovieOne, favMovieTwo, favMovieThree, favMovieFour, favMovieFive];
-console.log(`There are: ${favMovies.length} movies total`);
+// let favMovies = [favMovieOne, favMovieTwo, favMovieThree, favMovieFour, favMovieFive];
+// console.log(`There are: ${favMovies.length} movies total`);
 
-let favMoviesTitles = [favMovieOne[0], favMovieTwo[0], favMovieThree[0], favMovieFour[0], favMovieFive[0]];
-alert(`My favorite movies are ${favMoviesTitles}`);
+// let favMoviesTitles = [favMovieOne[0], favMovieTwo[0], favMovieThree[0], favMovieFour[0], favMovieFive[0]];
+// alert(`My favorite movies are ${favMoviesTitles}`);
 
-let bestAndWorstMovie = [favMoviesTitles[0], favMoviesTitles[1]];
-console.log(`My favorite movie is: ${bestAndWorstMovie[0]} and my lest favorite movie is: ${bestAndWorstMovie[1]}`);
+// let bestAndWorstMovie = [favMoviesTitles[0], favMoviesTitles[1]];
+// console.log(`My favorite movie is: ${bestAndWorstMovie[0]} and my lest favorite movie is: ${bestAndWorstMovie[1]}`);
+
+// Loooooooooops
+
+// let x = 0;
+// while (x<10){
+//     console.log(x);
+//     x++;
+// };
+
+// for (let i = 0; i <20; i++){
+//     console.log(i);
+// }
+
+// for (let i = 0; i <20; i++){
+//     if(i == 4){
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+// let i = 0;
+// do{
+//     console.log(i);
+//     i++;
+// } while (i<10);
+
+// let arr3 = [1,2,3,4,5];
+// arr3.forEach(function(x){
+//     alert(x);
+// })
+
+// let arr3 = [1,2,3,4,5];
+// let myString = 'Wassup';
+// for(i of myString){
+//     console.log(i);
+// }
+
+let people = {
+    firstName: 'Felipe',
+    lastName: 'Hernandez',
+    age: 33,
+}
+
+
+console.log(people);
+
+for (person in people){
+    // console.log(people[person]);
+    console.log(people.firstName);
+}
