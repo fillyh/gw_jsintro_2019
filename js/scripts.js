@@ -5,6 +5,7 @@ const userInput = document.querySelector('#userInput');
 const hThreeHeader = document.querySelector("#conversionResult");
 const fahrenheitBtn = document.querySelector("#fahrenheitBtn");
 const celsiusBtn = document.querySelector("#celsiusBtn");
+const numberNeededMssg =`Looks like you didn't enter a number`;
 
 // Converts user input from celcius to fahrenheit
 function celciusToFahrenheit(){
@@ -18,24 +19,34 @@ function fahrenheitToCelcius(){
     hThreeHeader.innerHTML = `${userInput.value} fahrenheit is ${fTemp_To_cTemp} celcius `;
 }
 
+function needNumbersFunction(){
+    hThreeHeader.innerHTML = numberNeededMssg;
+}
 
 // this allows us to gather the user info from the DOM
 // userInput.addEventListener('click', celciusToFahrenheit);
 // userInput.addEventListener('input', fahrenheitToCelcius);
 
 // Event listener shows result on dom
+// fahrenheitBtn.addEventListener('click', fahrenheitToCelcius);
+// celsiusBtn.addEventListener('click', celciusToFahrenheit);
+
+function clickButtonsNoNumber(){
+    fahrenheitBtn.addEventListener('click', needNumbersFunction);
+    celsiusBtn.addEventListener('click', needNumbersFunction);
+}
+
+function clickButtonsValidNumber(){
 fahrenheitBtn.addEventListener('click', fahrenheitToCelcius);
 celsiusBtn.addEventListener('click', celciusToFahrenheit);
+}
 
+function clickMyButtons(){
+if (userInput.value !== "" ){
+    clickButtonsNoNumber();
+} else {
+    clickButtonsValidNumber();
+} 
+}
 
-
- 
-// userInput.addEventListener('input', function(){
-//     const numberToConvert = userInput.value;
-//     const cTemp_To_FTemp = (numberToConvert * (9/5)) + 32;
-//     const fTemp_To_cTemp = (numberToConvert - 32) * 5/9;
-//     console.log(`this is celcius ${cTemp_To_FTemp}`);
-//     console.log(`This is fahrenheit ${fTemp_To_cTemp}`);
-//     console.log(userInput.value);
-// });
-
+clickMyButtons();
