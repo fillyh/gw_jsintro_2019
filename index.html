@@ -9,10 +9,38 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center my_header">Tmeperature Converter</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 input_box">
+                <input type="number" placeholder="Enter Temp" class="text-center center-block input_field" id="userInput">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center my_btns">
+                <button type="button" class="btn btn-default" id="fahrenheitBtn">Fahrenheit to Celsius</button>
+                <button type="button" class="btn btn-default" id="celsiusBtn">Celsius to Fahrenheit</button>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="result_box">
+                        <h3 class="text-center result" id="conversionResult"></h3>
+                </div>
+            </div>
+        </div>
+    </main>
     
 
 
     <script src="js/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
