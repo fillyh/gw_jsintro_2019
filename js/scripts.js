@@ -28,25 +28,26 @@ function needNumbersFunction(){
 // userInput.addEventListener('input', fahrenheitToCelcius);
 
 // Event listener shows result on dom
-// fahrenheitBtn.addEventListener('click', fahrenheitToCelcius);
-// celsiusBtn.addEventListener('click', celciusToFahrenheit);
 
+// This is only if there is no number entered
 function clickButtonsNoNumber(){
     fahrenheitBtn.addEventListener('click', needNumbersFunction);
     celsiusBtn.addEventListener('click', needNumbersFunction);
 }
 
+// This is only if there IS a number entered
 function clickButtonsValidNumber(){
 fahrenheitBtn.addEventListener('click', fahrenheitToCelcius);
 celsiusBtn.addEventListener('click', celciusToFahrenheit);
 }
 
+
 function clickMyButtons(){
-if (userInput.value !== "" ){
+if (userInput.value === null){
     clickButtonsNoNumber();
-} else {
+} else  {
     clickButtonsValidNumber();
 } 
 }
+clickMyButtons()
 
-clickMyButtons();
