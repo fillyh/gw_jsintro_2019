@@ -1,11 +1,36 @@
-
-
 // My IDs
 const userInput = document.querySelector('#userInput');
 const hThreeHeader = document.querySelector("#conversionResult");
 const fahrenheitBtn = document.querySelector("#fahrenheitBtn");
 const celsiusBtn = document.querySelector("#celsiusBtn");
 const numberNeededMssg =`Looks like you didn't enter a number`;
+
+
+// This is only if there IS a number entered
+function clickButtonsValidNumber(){
+    fahrenheitBtn.addEventListener('click', fahrenheitToCelcius);
+    celsiusBtn.addEventListener('click', celciusToFahrenheit);
+    }
+    
+    // This is only if there is no number entered
+    function clickButtonsNoNumber(){
+        fahrenheitBtn.addEventListener('click', needNumbersFunction);
+        celsiusBtn.addEventListener('click', needNumbersFunction);
+    }
+    
+    function clickMyButtons(){
+    if (userInput.vlaue === null){
+        clickButtonsNoNumber();
+    } else  {
+        clickButtonsValidNumber();
+    } 
+    }
+    clickMyButtons();
+    
+
+function needNumbersFunction(){
+    hThreeHeader.innerHTML = numberNeededMssg;
+}
 
 // Converts user input from celcius to fahrenheit
 function celciusToFahrenheit(){
@@ -19,37 +44,4 @@ function fahrenheitToCelcius(){
     hThreeHeader.innerHTML = `${userInput.value} fahrenheit is ${fTemp_To_cTemp} celcius `;
 }
 
-function needNumbersFunction(){
-    hThreeHeader.innerHTML = numberNeededMssg;
-}
-
-// This is only if there IS a number entered
-function clickButtonsValidNumber(){
-fahrenheitBtn.addEventListener('click', fahrenheitToCelcius);
-celsiusBtn.addEventListener('click', celciusToFahrenheit);
-}
-
-// This is only if there is no number entered
-function clickButtonsNoNumber(){
-    fahrenheitBtn.addEventListener('click', needNumbersFunction);
-    celsiusBtn.addEventListener('click', needNumbersFunction);
-}
-
-function clickMyButtons(){
-if (userInput.vlaue === null){
-    clickButtonsNoNumber();
-} else  {
-    clickButtonsValidNumber();
-} 
-}
-clickMyButtons();
-
-
-
-
-// this allows us to gather the user info from the DOM
-// userInput.addEventListener('click', celciusToFahrenheit);
-// userInput.addEventListener('input', fahrenheitToCelcius);
-
-// Event listener shows result on dom
 
