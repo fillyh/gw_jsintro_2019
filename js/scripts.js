@@ -23,11 +23,11 @@ function needNumbersFunction(){
     hThreeHeader.innerHTML = numberNeededMssg;
 }
 
-// this allows us to gather the user info from the DOM
-// userInput.addEventListener('click', celciusToFahrenheit);
-// userInput.addEventListener('input', fahrenheitToCelcius);
-
-// Event listener shows result on dom
+// This is only if there IS a number entered
+function clickButtonsValidNumber(){
+fahrenheitBtn.addEventListener('click', fahrenheitToCelcius);
+celsiusBtn.addEventListener('click', celciusToFahrenheit);
+}
 
 // This is only if there is no number entered
 function clickButtonsNoNumber(){
@@ -35,19 +35,21 @@ function clickButtonsNoNumber(){
     celsiusBtn.addEventListener('click', needNumbersFunction);
 }
 
-// This is only if there IS a number entered
-function clickButtonsValidNumber(){
-fahrenheitBtn.addEventListener('click', fahrenheitToCelcius);
-celsiusBtn.addEventListener('click', celciusToFahrenheit);
-}
-
-
 function clickMyButtons(){
-if (userInput.value === null){
+if (userInput.vlaue === null){
     clickButtonsNoNumber();
 } else  {
     clickButtonsValidNumber();
 } 
 }
-clickMyButtons()
+clickMyButtons();
+
+
+
+
+// this allows us to gather the user info from the DOM
+// userInput.addEventListener('click', celciusToFahrenheit);
+// userInput.addEventListener('input', fahrenheitToCelcius);
+
+// Event listener shows result on dom
 
