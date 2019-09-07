@@ -1,0 +1,20 @@
+.row{
+    background-color:#004;
+
+}
+
+.content{
+    background-color:#eee;
+    padding: 1.5em;
+    height:100vh;
+    margin: 0 auto;
+}
+
+/* textarea, input{
+    width:100%;
+    float:left;
+} */
+
+.btn{
+    margin:20px;
+}
